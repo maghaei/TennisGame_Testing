@@ -3,8 +3,8 @@
 // Write unit tests in TennisGameTest.java and try to find the errors in the code
 
 public class TennisGame {
-	private int player1Points;
-	private int player2Points;
+	public int player1Points;
+	public int player2Points;
 	
 	private boolean gameEnded;
 	
@@ -77,13 +77,13 @@ public class TennisGame {
 					return "player2 wins";
 			}
 			
-			if (player1Points >= 4 && player1Points == player2Points)
+			if (player1Points >= 3 && player1Points == player2Points)
 				return "deuce";
 			
 			if (player1Points >= 4 && player1Points - player2Points == 1)
 				return "player1 has advantage";
 			
-			if (player2Points > 4 && player2Points - player1Points == 1)
+			if (player2Points >= 4 && player2Points - player1Points == 1)
 				return "player2 has advantage";							
 			
 			return  player2Score + " - " + player1Score ;
